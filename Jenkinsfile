@@ -20,7 +20,8 @@ pipeline {
 
         stage('Build & Unit Test') {
             steps {
-                sh 'mvn clean compile test jacoco:report'
+                // sh 'mvn clean compile test jacoco:report'
+                sh 'mvn clean test -DskipTests=false'
             }
         }
 
@@ -65,6 +66,8 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/*.xml'
+
+            junit testResults: 'target/surefire-reports/*.xml', allowEmptyResults: true
 
             recordIssues(
                 tools: [
