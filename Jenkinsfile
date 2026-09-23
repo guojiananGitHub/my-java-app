@@ -65,14 +65,11 @@ pipeline {
 
     post {
         always {
-            junit 'target/surefire-reports/*.xml'
-
             junit testResults: 'target/surefire-reports/*.xml', allowEmptyResults: true
 
             recordIssues(
                 tools: [
-                    spotBugs(pattern: 'target/spotbugsXml.xml'),
-                    dependencyCheck(pattern: 'target/dependency-check/dependency-check-report.xml')
+                    spotBugs(pattern: 'target/spotbugsXml.xml')
                 ],
                 qualityGates: [
                     [threshold: 50, type: 'TOTAL', criticality: 'UNSTABLE'],

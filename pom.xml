@@ -81,7 +81,7 @@
                 <artifactId>dependency-check-maven</artifactId>
                 <version>${dependency-check.version}</version>
                 <configuration>
-                    <format>ALL</format>
+                    <format>ALL</format>   <!-- 或 HTML,JSON,XML -->
                     <failBuildOnCVSS>9</failBuildOnCVSS>
                     <outputDirectory>${project.build.directory}/dependency-check</outputDirectory>
                 </configuration>
