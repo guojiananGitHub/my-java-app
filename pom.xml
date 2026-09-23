@@ -16,7 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- SpotBugs 配置 -->
-        <spotbugs.version>4.8.3</spotbugs.version>
+        <!-- <spotbugs.version>4.8.3</spotbugs.version> -->
+        <spotbugs.version>4.8.6.5</spotbugs.version>
 
         <!-- Dependency-Check 配置 -->
         <dependency-check.version>9.0.9</dependency-check.version>
