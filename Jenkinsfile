@@ -12,11 +12,11 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/你的用户名/my-java-app.git'
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         git 'https://github.com/你的用户名/my-java-app.git'
+        //     }
+        // }
 
         stage('Build & Unit Test') {
             steps {
